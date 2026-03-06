@@ -3,74 +3,81 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Colby Supply provides marine and industrial supplies with locations in New Orleans, LA and Houston, TX." />
-  <title>Colby Supply | Marine & Industrial Supply</title>
+  <meta name="description" content="Explore Colby Supply products and services, including marine, industrial, safety, maintenance, and operational supply categories." />
+  <title>Products &amp; Services | Colby Supply</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
-
-<style>
-.page-hero{padding:72px 0 42px}
-.eyebrow{display:inline-block;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;opacity:.72;margin-bottom:14px}
-.lead{max-width:760px}
-.section{padding:56px 0}
-.section-alt{background:rgba(255,255,255,.03)}
-.section-heading{margin-bottom:24px}
-.grid{display:grid;gap:22px}
-.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.card ul{margin:12px 0 0 18px;padding:0}
-.card li{margin:0 0 8px}
-</style>
-
+  <style>
+    .page-hero{padding:46px 0 26px}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:6px 10px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:.92rem;
+      margin-bottom:10px;
+    }
+    .page-intro{max-width:72ch;color:var(--muted)}
+    .category-card{padding:18px}
+    .category-card h3{margin:0 0 10px}
+    .category-card ul{margin:0;padding-left:18px;color:var(--muted)}
+    .category-card li{margin-bottom:8px}
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <div data-include="header"></div>
 
-  <main>
-    <section class="page-hero">
+  <main id="main">
+    <section class="hero">
       <div class="container">
-        <span class="eyebrow">Products &amp; Services</span>
-        <h1>Industrial Supply Support for Marine, Commercial &amp; Field Operations</h1>
-        <p class="lead">
-          Colby Supply supports customers with direct delivery, tailored supply programs, and access to a broad range of marine, industrial, safety, maintenance, and operational products.
+        <div class="eyebrow">Products &amp; Services</div>
+        <h1>Marine, industrial, safety and operations supply support</h1>
+        <p class="lede page-intro">
+          Colby Supply supports customers with direct delivery, tailored supply programs, and access to a broad range of products for marine, commercial, industrial, and field operations.
         </p>
         <div class="hero-actions">
-          <a class="btn" href="assets/Colby-Supply-Line-Card.pdf" download>Download Line Card PDF</a>
-          <a class="btn btn-secondary" href="locations.html">View Locations</a>
+          <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download Line Card PDF</a>
+          <a class="cta secondary" href="locations.html">View Locations</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section>
       <div class="container">
-        <div class="grid grid-2">
-          <div class="card">
-            <h2>Service Coverage</h2>
+        <div class="grid-2">
+          <div class="card tile">
+            <h2 style="margin-top:0;">Service coverage</h2>
             <p>
-              Colby Supply is a full-service supply company with locations in New Orleans and Houston, with direct delivery support across the Gulf Coast and supply solutions tailored to customer operations.
+              Colby Supply is a full-service supply company with locations in New Orleans and Houston, serving customers across the Gulf Coast with responsive delivery and supply support.
             </p>
           </div>
-          <div class="card">
-            <h2>Line Card Download</h2>
+          <div class="card tile">
+            <h2 style="margin-top:0;">Line card download</h2>
             <p>
-              Need a printable version for purchasing, internal review, or job folders? Download the full Colby Supply line card below.
+              Need a printable version for purchasing, internal review, or job folders? Download the full Colby Supply line card here.
             </p>
-            <p style="margin-top: 18px;">
-              <a class="btn" href="assets/Colby-Supply-Line-Card.pdf" download>Download PDF</a>
-            </p>
+            <div class="hero-actions">
+              <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download PDF</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+    <section class="band">
       <div class="container">
-        <div class="section-heading">
-          <h2>Core Product Categories</h2>
-          <p>Representative categories based on the current line sheet and supply program.</p>
+        <div class="section-title">
+          <h2>Core product categories</h2>
+          <p>Representative categories based on the current Colby Supply line card.</p>
         </div>
 
-        <div class="grid grid-3">
-          <div class="card">
+        <div class="grid-3">
+          <div class="card category-card">
             <h3>Rigging &amp; Deck Supply</h3>
             <ul>
               <li>Cordage and rigging</li>
@@ -80,7 +87,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Safety &amp; Marine Safety</h3>
             <ul>
               <li>PPE and jobsite safety products</li>
@@ -90,7 +97,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Lighting &amp; Communications</h3>
             <ul>
               <li>Marine and industrial lighting</li>
@@ -100,7 +107,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Hose, Pipe &amp; Valves</h3>
             <ul>
               <li>Industrial hose and dredge hose</li>
@@ -110,7 +117,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Tools &amp; Equipment</h3>
             <ul>
               <li>Hand tools and pneumatic tools</li>
@@ -120,7 +127,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Chemicals &amp; Janitorial</h3>
             <ul>
               <li>Degreasers and cleaning chemicals</li>
@@ -130,7 +137,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Paint, Coatings &amp; Consumables</h3>
             <ul>
               <li>Marine and industrial coatings</li>
@@ -140,7 +147,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Power, Filtration &amp; Electrical</h3>
             <ul>
               <li>Batteries and power accessories</li>
@@ -150,7 +157,7 @@
             </ul>
           </div>
 
-          <div class="card">
+          <div class="card category-card">
             <h3>Hydration, Galley &amp; Facility Supply</h3>
             <ul>
               <li>Water, hydration mixes and ice chests</li>
@@ -163,19 +170,24 @@
       </div>
     </section>
 
-    <section class="section">
+    <section>
       <div class="container">
-        <div class="card">
-          <h2>Major Brands Across Multiple Categories</h2>
+        <div class="card tile">
+          <h2 style="margin-top:0;">Download the full line card</h2>
           <p>
-            Colby Supply works with a broad range of manufacturers and distributor partners across marine, industrial, maintenance, safety, power, filtration, coatings, and operational supply categories.
+            For full brand references and additional product lines, download the current Colby Supply line card or contact the team directly.
           </p>
-          <p>
-            For full brand references and additional product lines, download the complete line card or contact the team directly.
-          </p>
+          <div class="hero-actions">
+            <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download Full Line Card</a>
+            <a class="cta secondary" href="mailto:sales@colbysupply.com">Contact Us</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
+  <div data-include="footer"></div>
 
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

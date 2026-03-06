@@ -45,7 +45,7 @@
 
   function setActiveNav(){
     const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
-    const key = path.includes('locations') ? 'locations' : 'index';
+    const key = path.includes('products-services') ? 'products' : (path.includes('locations') ? 'locations' : 'index');
     document.querySelectorAll('a[data-nav]').forEach(a => {
       if(a.getAttribute('data-nav') === key){
         a.setAttribute('aria-current', 'page');
