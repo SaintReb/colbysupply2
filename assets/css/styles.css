@@ -348,3 +348,12 @@ hr.sep{
   html{scroll-behavior:auto}
   *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
 }
+
+
+/* Footer polish update */
+.site-footer{
+  border-top:1px solid #e5e7eb;
+  margin-top:60px;
+  padding-top:30px;
+  color:#4b5563;
+}
