@@ -7,24 +7,21 @@
   <title>Products &amp; Services | Colby Supply</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    .page-hero{padding:46px 0 26px}
-    .eyebrow{
-      display:inline-flex;
+    .utility-row{
+      display:flex;
       align-items:center;
-      gap:10px;
-      padding:6px 10px;
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:999px;
-      color:var(--muted);
-      font-size:.92rem;
-      margin-bottom:10px;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      margin:8px 0 20px;
     }
-    .page-intro{max-width:72ch;color:var(--muted)}
     .category-card{padding:18px}
     .category-card h3{margin:0 0 10px}
     .category-card ul{margin:0;padding-left:18px;color:var(--muted)}
     .category-card li{margin-bottom:8px}
+    @media (max-width:700px){
+      .utility-row{align-items:flex-start}
+    }
   </style>
 </head>
 <body>
@@ -33,47 +30,18 @@
   <div data-include="header"></div>
 
   <main id="main">
-    <section class="hero">
-      <div class="container">
-        <div class="eyebrow">Products &amp; Services</div>
-        <h1>Marine, industrial, safety and operations supply support</h1>
-        <p class="lede page-intro">
-          Colby Supply supports customers with direct delivery, tailored supply programs, and access to a broad range of products for marine, commercial, industrial, and field operations.
-        </p>
-        <div class="hero-actions">
-          <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download Line Card PDF</a>
-          <a class="cta secondary" href="locations.html">View Locations</a>
-        </div>
-      </div>
-    </section>
-
     <section>
       <div class="container">
-        <div class="grid-2">
-          <div class="card tile">
-            <h2 style="margin-top:0;">Service coverage</h2>
-            <p>
-              Colby Supply is a full-service supply company with locations in New Orleans and Houston, serving customers across the Gulf Coast with responsive delivery and supply support.
-            </p>
-          </div>
-          <div class="card tile">
-            <h2 style="margin-top:0;">Line card download</h2>
-            <p>
-              Need a printable version for purchasing, internal review, or job folders? Download the full Colby Supply line card here.
-            </p>
-            <div class="hero-actions">
-              <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download PDF</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="breadcrumbs">Home / Products &amp; Services</div>
 
-    <section class="band">
-      <div class="container">
-        <div class="section-title">
-          <h2>Core product categories</h2>
+        <div class="section-title" style="margin-top:18px;">
+          <h1>Products &amp; Services</h1>
           <p>Representative categories based on the current Colby Supply line card.</p>
+        </div>
+
+        <div class="utility-row">
+          <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download Line Card PDF</a>
+          <a href="mailto:sales@colbysupply.com">Contact Us</a>
         </div>
 
         <div class="grid-3">
@@ -165,21 +133,6 @@
               <li>Bathroom, galley and office supplies</li>
               <li>Operational support products for crews and facilities</li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="card tile">
-          <h2 style="margin-top:0;">Download the full line card</h2>
-          <p>
-            For full brand references and additional product lines, download the current Colby Supply line card or contact the team directly.
-          </p>
-          <div class="hero-actions">
-            <a class="cta" href="assets/Colby-Supply-Line-Card.pdf" download>Download Full Line Card</a>
-            <a class="cta secondary" href="mailto:sales@colbysupply.com">Contact Us</a>
           </div>
         </div>
       </div>
