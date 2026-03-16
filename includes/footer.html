@@ -5,6 +5,7 @@
         <h3>Colby Service &amp; Supply, LLC</h3>
         <p>Marine &amp; Industrial Supply</p>
         <p>New Orleans, LA • Houston, TX</p>
+        <button class="cta secondary footer-contact-btn" type="button" data-contact-open>Send a Message</button>
       </div>
 
       <div class="footer-links">
@@ -20,6 +21,7 @@
         <h4>Contact</h4>
         <p><a href="tel:+15047310331">(504) 731-0331</a></p>
         <p><a href="mailto:sales@colbysupply.com">sales@colbysupply.com</a></p>
+        <p class="small">For quote requests, product sourcing, and general inquiries.</p>
       </div>
     </div>
   </div>
@@ -30,3 +32,80 @@
     </div>
   </div>
 </footer>
+
+<div class="contact-drawer" data-contact-drawer hidden aria-hidden="true">
+  <div class="contact-drawer__backdrop" data-contact-close></div>
+  <aside class="contact-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="contactDrawerTitle">
+    <button class="contact-drawer__close" type="button" aria-label="Close contact form" data-contact-close>×</button>
+
+    <div class="contact-drawer__hero">
+      <p class="contact-drawer__eyebrow">Quick Contact</p>
+      <h2 id="contactDrawerTitle">Request a quote or send us a message</h2>
+      <p>Tell us what you need and the Colby team will follow up as soon as possible.</p>
+    </div>
+
+    <div class="contact-drawer__details">
+      <div>
+        <strong>Phone</strong>
+        <a href="tel:+15047310331">(504) 731-0331</a>
+      </div>
+      <div>
+        <strong>Email</strong>
+        <a href="mailto:sales@colbysupply.com">sales@colbysupply.com</a>
+      </div>
+    </div>
+
+    <form class="contact-drawer__form form" action="https://formspree.io/f/xlgpljvy" method="POST" data-contact-form>
+      <div class="contact-drawer__grid grid-2">
+        <div class="field">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" type="text" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" type="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="contact-company">Company</label>
+          <input id="contact-company" type="text" name="company" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="contact-phone">Phone</label>
+          <input id="contact-phone" type="tel" name="phone" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="contact-interest">Product interest</label>
+        <select id="contact-interest" name="product_interest">
+          <option value="">Select one</option>
+          <option>Marine Supplies</option>
+          <option>Industrial Supplies</option>
+          <option>Safety Products</option>
+          <option>Spill Response</option>
+          <option>General Quote Request</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="6" placeholder="Tell us what you need, quantities, specs, or timeline." required></textarea>
+      </div>
+
+      <label class="contact-drawer__check">
+        <input type="checkbox" name="quote_request" value="Yes">
+        This is a quote request
+      </label>
+
+      <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+      <input type="hidden" name="_subject" value="New Colby Supply website inquiry">
+
+      <div class="contact-drawer__actions">
+        <button class="cta" type="submit">Send Message</button>
+        <button class="cta secondary" type="button" data-contact-close>Cancel</button>
+      </div>
+      <p class="contact-drawer__help help">By submitting this form, your message will be sent securely through Formspree.</p>
+      <p class="contact-drawer__status" data-contact-status aria-live="polite"></p>
+    </form>
+  </aside>
+</div>
