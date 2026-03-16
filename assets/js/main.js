@@ -60,6 +60,12 @@
     const panel = drawer.querySelector('.contact-drawer__panel');
     const status = drawer.querySelector('[data-contact-status]');
     const form = drawer.querySelector('[data-contact-form]');
+    const inquiryType = drawer.querySelector('[data-inquiry-type]');
+    const quoteField = drawer.querySelector('[data-inquiry-field="quote"]');
+    const vendorField = drawer.querySelector('[data-inquiry-field="vendor"]');
+    const productInterest = drawer.querySelector('#contact-interest');
+    const vendorBrand = drawer.querySelector('#contact-vendor-brand');
+    const vendorWebsite = drawer.querySelector('#contact-vendor-website');
     let lastTrigger = null;
 
     function openDrawer(trigger){
@@ -67,7 +73,8 @@
       drawer.hidden = false;
       drawer.setAttribute('aria-hidden', 'false');
       document.body.classList.add('contact-open');
-      const focusTarget = drawer.querySelector('#contact-name') || panel;
+      syncInquiryFields();
+      const focusTarget = drawer.querySelector('#contact-inquiry-type') || drawer.querySelector('#contact-name') || panel;
       window.setTimeout(() => focusTarget && focusTarget.focus(), 30);
     }
 
@@ -77,6 +84,30 @@
       document.body.classList.remove('contact-open');
       if(status && !status.classList.contains('is-success')) status.textContent = '';
       if(lastTrigger && typeof lastTrigger.focus === 'function') lastTrigger.focus();
+    }
+    function syncInquiryFields(){
+      if(!inquiryType) return;
+      const value = inquiryType.value;
+      const isQuote = value === 'Request a Quote';
+      const isVendor = value === 'Vendor Request';
+
+      if(quoteField){
+        quoteField.hidden = !isQuote;
+      }
+      if(vendorField){
+        vendorField.hidden = !isVendor;
+      }
+      if(productInterest){
+        productInterest.required = isQuote;
+        if(!isQuote) productInterest.value = '';
+      }
+      if(vendorBrand){
+        vendorBrand.required = isVendor;
+        if(!isVendor) vendorBrand.value = '';
+      }
+      if(vendorWebsite && !isVendor){
+        vendorWebsite.value = '';
+      }
     }
 
     document.querySelectorAll('[data-contact-open]').forEach(el => {
@@ -91,9 +122,15 @@
       if(event.key === 'Escape' && !drawer.hidden) closeDrawer();
     });
 
+    if(inquiryType){
+      inquiryType.addEventListener('change', syncInquiryFields);
+      syncInquiryFields();
+    }
+
     if(form){
       form.addEventListener('submit', async (event) => {
         event.preventDefault();
+        syncInquiryFields();
         if(status){
           status.textContent = 'Sending your message…';
           status.className = 'contact-drawer__status';
@@ -110,6 +147,7 @@
           if(!response.ok) throw new Error('Form submission failed');
 
           form.reset();
+          syncInquiryFields();
           if(status){
             status.textContent = 'Thanks — your message has been sent. Colby Supply will follow up soon.';
             status.className = 'contact-drawer__status is-success';

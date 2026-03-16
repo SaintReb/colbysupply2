@@ -613,3 +613,10 @@ body.contact-open{
     grid-template-columns:1fr;
   }
 }
+
+.contact-drawer__vendor-grid{
+  margin-bottom:12px;
+}
+.contact-drawer__form [hidden]{
+  display:none !important;
+}

@@ -40,8 +40,8 @@
 
     <div class="contact-drawer__hero">
       <p class="contact-drawer__eyebrow">Quick Contact</p>
-      <h2 id="contactDrawerTitle">Request a quote or send us a message</h2>
-      <p>Tell us what you need and the Colby team will follow up as soon as possible.</p>
+      <h2 id="contactDrawerTitle">Quotes, vendor requests, and general inquiries</h2>
+      <p>Select your inquiry type and the Colby team will follow up as soon as possible.</p>
     </div>
 
     <div class="contact-drawer__details">
@@ -56,6 +56,16 @@
     </div>
 
     <form class="contact-drawer__form form" action="https://formspree.io/f/xlgpljvy" method="POST" data-contact-form>
+      <div class="field">
+        <label for="contact-inquiry-type">Inquiry Type</label>
+        <select id="contact-inquiry-type" name="inquiry_type" required data-inquiry-type>
+          <option value="">Select one</option>
+          <option value="General Inquiry">General Inquiry</option>
+          <option value="Request a Quote">Request a Quote</option>
+          <option value="Vendor Request">Vendor Request</option>
+        </select>
+      </div>
+
       <div class="contact-drawer__grid grid-2">
         <div class="field">
           <label for="contact-name">Name</label>
@@ -75,7 +85,7 @@
         </div>
       </div>
 
-      <div class="field">
+      <div class="field" data-inquiry-field="quote">
         <label for="contact-interest">Product interest</label>
         <select id="contact-interest" name="product_interest">
           <option value="">Select one</option>
@@ -87,15 +97,21 @@
         </select>
       </div>
 
-      <div class="field">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" rows="6" placeholder="Tell us what you need, quantities, specs, or timeline." required></textarea>
+      <div class="contact-drawer__vendor-grid grid-2" data-inquiry-field="vendor" hidden>
+        <div class="field">
+          <label for="contact-vendor-brand">Product Line / Brand</label>
+          <input id="contact-vendor-brand" type="text" name="vendor_brand">
+        </div>
+        <div class="field">
+          <label for="contact-vendor-website">Website</label>
+          <input id="contact-vendor-website" type="url" name="vendor_website" placeholder="https://">
+        </div>
       </div>
 
-      <label class="contact-drawer__check">
-        <input type="checkbox" name="quote_request" value="Yes">
-        This is a quote request
-      </label>
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="6" placeholder="Tell us what you need, what you sell, quantities, specs, or timeline." required></textarea>
+      </div>
 
       <input class="contact-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_subject" value="New Colby Supply website inquiry">
