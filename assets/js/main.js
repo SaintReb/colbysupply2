@@ -136,6 +136,14 @@
           status.className = 'contact-drawer__status';
         }
 
+        const companyField = drawer.querySelector('#contact-company');
+        const inquiryValue = inquiryType && inquiryType.value ? inquiryType.value.trim() : 'General Inquiry';
+        const companyValue = companyField && companyField.value ? companyField.value.trim() : 'No Company Listed';
+        const subjectField = form.querySelector('input[name="_subject"]');
+        if(subjectField){
+          subjectField.value = `${inquiryValue} - ${companyValue} - ColbySupply.com`;
+        }
+
         const formData = new FormData(form);
         try{
           const response = await fetch(form.action, {
