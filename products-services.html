@@ -10,18 +10,19 @@
     .utility-row{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:16px;
+      justify-content:flex-start;
+      gap:10px;
       flex-wrap:wrap;
       margin:8px 0 20px;
+    }
+    .utility-row .btn-primary{
+      display:inline-block;
+      margin:0;
     }
     .category-card{padding:18px}
     .category-card h3{margin:0 0 10px}
     .category-card ul{margin:0;padding-left:18px;color:var(--muted)}
     .category-card li{margin-bottom:8px}
-    @media (max-width:700px){
-      .utility-row{align-items:flex-start}
-    }
   </style>
 </head>
 <body>
@@ -39,13 +40,8 @@
         </div>
 
         <div class="utility-row">
-          <a href="assets/Colby-Supply-Line-Card.pdf" class="btn-primary">
-  Download Line Card PDF
-</a>
-
-<a href="assets/Colby-Catalog.pdf" class="btn-primary" target="_blank" style="margin-left:10px;">
-  View Full Catalog
-</a>
+          <a href="assets/Colby-Supply-Line-Card.pdf" class="btn-primary">Download Line Card PDF</a>
+          <a href="assets/Colby-Catalog.pdf" class="btn-primary" target="_blank" rel="noopener">Download Full Catalog PDF</a>
         </div>
 
         <h2>Core product categories</h2>
