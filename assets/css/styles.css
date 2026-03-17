@@ -620,3 +620,17 @@ body.contact-open{
 .contact-drawer__form [hidden]{
   display:none !important;
 }
+.btn-primary {
+  display: inline-block;
+  background-color: #c8102e; /* Colby red */
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #a50d25;
+}
